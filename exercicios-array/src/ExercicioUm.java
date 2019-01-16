@@ -1,3 +1,7 @@
+/*
+ * Mostra apenas as idades que são maiores que 18 e conta
+ * quantas idades são maiores e quantas são menores.
+ */
 
 public class ExercicioUm {
 	public static void main(String[] args) {
