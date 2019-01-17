@@ -1,4 +1,4 @@
-package exercicios.array.referencia;
+package exercicio.array.tipo.objeto;
 
 public class ExercicioArrayReferencia {
 	public static void main(String[] args) {
@@ -11,13 +11,16 @@ public class ExercicioArrayReferencia {
 		 *  arrays de referencias guardam um conjunto de referencias que apontam para objetos.
 		 */
 
-		ContaCorrente[] contas = new ContaCorrente[5];
+		Object[] contas = new Object[5];
 
-		ContaCorrente conta1 = new ContaCorrente(123, 150.90);
-		ContaCorrente conta2 = new ContaCorrente(54321, 290.00);
+		ContaCorrente conta1 = new ContaCorrente(1233, 3344);
+		ContaCorrente conta2 = new ContaCorrente(5434, 4455);
+		
+		Cliente cliente = new Cliente("Maria da Silva", "Rua das Flores");
 
 		contas[0] = conta1;
 		contas[1] = conta2;
+		contas[2] = cliente;
 
 		System.out.println("Todas as contas cadastradas");
 		for (int i = 0; i < contas.length; i++) {
