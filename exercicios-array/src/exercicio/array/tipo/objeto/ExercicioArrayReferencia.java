@@ -11,23 +11,41 @@ public class ExercicioArrayReferencia {
 		 *  arrays de referencias guardam um conjunto de referencias que apontam para objetos.
 		 */
 
-		Object[] contas = new Object[5];
+		Object[] referencias = new Object[5];
+		Cliente[] clientes = new Cliente[5];
 
 		ContaCorrente conta1 = new ContaCorrente(1233, 3344);
 		ContaCorrente conta2 = new ContaCorrente(5434, 4455);
 		
 		Cliente cliente = new Cliente("Maria da Silva", "Rua das Flores");
 
-		contas[0] = conta1;
-		contas[1] = conta2;
-		contas[2] = cliente;
+		referencias[0] = conta1;
+		referencias[1] = conta2;
+		referencias[2] = cliente;
+		clientes[0] = cliente;
 
-		System.out.println("Todas as contas cadastradas");
-		for (int i = 0; i < contas.length; i++) {
-			System.out.println(contas[i]);
-		}
+		/*
+		 * System.out.println("Todas as contas cadastradas"); for (int i = 0; i <
+		 * referencias.length; i++) { System.out.println(referencias[i]); }
+		 * 
+		 * System.out.println("Conta na posição zero: " + referencias[0]);
+		 */
+		
+		/*
+		 * Como o tipo Object[] é generico porque aceita guardar quanquer tipo de
+		 * referencia por isso é necessario fazer o type cast para acessar os metodos
+		 * do objeto.
+		 */
+		System.out.println("Usando array do tipo Object");
+		System.out.println(referencias[2]);
+		System.out.println(((Cliente) referencias[2]).getNome());
 
-		System.out.println("Conta na posição zero: " + contas[0]);
-
+		/*
+		 * Agora se for um array do tipo Cliente[] e o objeto for do tipo Cliente não é
+		 * necessario fazer type cast para acessar os metodos do object.
+		 */
+		System.out.println("");
+		System.out.println("Usando array do tipo Cliente");
+		System.out.println(clientes[0].getNome());
 	}
 }
