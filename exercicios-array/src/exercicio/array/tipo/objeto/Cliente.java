@@ -10,7 +10,6 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
@@ -18,10 +17,22 @@ public class Cliente {
 	public String getEndereco() {
 		return endereco;
 	}
-	
+
+	@Override
+	public boolean equals(Object obj) {
+
+		Cliente cliente = (Cliente) obj;
+
+		if (this.nome != cliente.getNome()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	@Override
 	public String toString() {
-		return "Cliente >>> nome: " + nome + ", endereco: " + endereco ;
+		return "Cliente >>> nome: " + nome + ", endereco: " + endereco;
 	}
-	
+
 }
