@@ -14,7 +14,7 @@ public class TesteInterfaceCollection {
 		Cliente c2 = new Cliente("Paula da Silveira", "Rua das Palmeiras");
 		Cliente c3 = new Cliente("Amanda Pereira", "Rua dos Cravos");
 
-		Collection<Cliente> clientes = new ArrayList<Cliente>();
+		List<Cliente> clientes = new ArrayList<Cliente>();
 		clientes.add(c1);
 		clientes.add(c2);
 		clientes.add(c3);
@@ -24,9 +24,9 @@ public class TesteInterfaceCollection {
 			System.out.println(cliente.getNome());
 		}
 		
-		//System.out.println("Busca pelo indice: " + clientes.get(1));
+		System.out.println("");
+		System.out.println("Busca pelo indice: " + clientes.get(1));
 		
-		System.out.println(clientes + "\n");
 	}
 
 }
