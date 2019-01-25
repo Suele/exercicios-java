@@ -1,3 +1,6 @@
+/*
+ * Este exercicio conta o número de divisores entre l e r inclusos por k.*/
+
 import java.util.Scanner;
 
 public class CountDivisors {
