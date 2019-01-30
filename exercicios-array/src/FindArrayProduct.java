@@ -6,6 +6,7 @@ public class FindArrayProduct {
 		Scanner input = new Scanner(System.in);
 
 		int resultado = 1;
+		int valores = 0;
 
 		System.out.println("Qual o tamanho do array? ");
 		int n = input.nextInt();
@@ -13,8 +14,9 @@ public class FindArrayProduct {
 		int[] a = new int[n];
 
 		for (int i = 0; i < a.length; i++) {
-
-			System.out.println(a[i] = i + 1);
+			
+			valores = input.nextInt();
+			a[i] = valores;
 		}
 
 		System.out.println("----------");
