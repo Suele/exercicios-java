@@ -25,5 +25,26 @@ public class CompareStrings {
 				System.out.println(">>> " + words[j]);
 			}
 		}
+
+		System.out.println(" ");
+
+		for (int j = 0; j < words.length; j++) {
+
+			if (words[j].equals("Maria")) {
+
+				System.out.println("---- " + words[j]);
+			}
+		}
+
+		System.out.println(" ");
+
+		for (int j = 0; j < words.length; j++) {
+
+			if (words[j].compareToIgnoreCase("Maria") == 0) {
+
+				System.out.println("+++ " + words[j]);
+			}
+		}
+
 	}
 }
