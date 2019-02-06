@@ -7,6 +7,7 @@ public class AprendendoSobreStringsParte4 {
 		Scanner entrada = new Scanner(System.in);
 
 		int quantidadeDeVogais = 0;
+		int quantidadeDeNumeros = 0;
 
 		System.out.print("Digite uma palavra: ");
 		String palavraOuFrase = entrada.nextLine();
@@ -15,20 +16,35 @@ public class AprendendoSobreStringsParte4 {
 
 		System.out.println(palavraOuFrase.toUpperCase());
 
-		System.out.println(palavraOuFrase.startsWith("p"));
+		System.out.println(palavraOuFrase.startsWith("UNI"));
 
-		System.out.println(palavraOuFrase.startsWith("p", 0));
+		System.out.println(palavraOuFrase.startsWith("UNI", 0));
 
+		System.out.println(palavraOuFrase.endsWith("rio"));
+
+		// conta o número de vogais que tem na palavra ou frase.
 		for (int i = 0; i < palavraOuFrase.length(); i++) {
 
-			if ((palavraOuFrase.charAt(i) == 'a') || (palavraOuFrase.charAt(i) == 'e')
-					|| (palavraOuFrase.charAt(i) == 'i') || (palavraOuFrase.charAt(i) == 'o')
-					|| (palavraOuFrase.charAt(i) == 'u')) {
+			if ((palavraOuFrase.toLowerCase().charAt(i) == 'a') || (palavraOuFrase.toLowerCase().charAt(i) == 'e')
+					|| (palavraOuFrase.toLowerCase().charAt(i) == 'i')
+					|| (palavraOuFrase.toLowerCase().charAt(i) == 'o')
+					|| (palavraOuFrase.toLowerCase().charAt(i) == 'u')) {
 
 				quantidadeDeVogais++;
 			}
 		}
-		
-		System.out.println(quantidadeDeVogais);
+
+		System.out.println("Número de vogais na string " + quantidadeDeVogais);
+
+		for (int j = 0; j < palavraOuFrase.length(); j++) {
+
+			if (Character.isDigit(palavraOuFrase.charAt(j))) {
+
+				quantidadeDeNumeros++;
+			}
+		}
+
+		System.out.println("Quantidade de caracteres númericos na string " + quantidadeDeNumeros);
+
 	}
 }
