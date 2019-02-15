@@ -17,7 +17,7 @@ public class MiniMaxSum {
 			arr[i] = valor;
 		}
 
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < arr.length - 1; i++) {
 			min += arr[i];
 		}
 
