@@ -11,7 +11,7 @@ public class BoloDeAniversario {
 		Scanner entradaDeDados = new Scanner(System.in);
 
 		int tamanhoDoArray = entradaDeDados.nextInt();
-		String vela = null;
+		int vela = 0;
 		int maiorVela = 1;
 		int maiorValor = 0;
 		int contandoMaiorValor = 0;
@@ -20,8 +20,8 @@ public class BoloDeAniversario {
 
 		// para inserir dados.
 		for (int i = 0; i < bolo.length; i++) {
-			vela = entradaDeDados.next();
-			bolo[i] = Integer.parseInt(vela);
+			vela = entradaDeDados.nextInt();
+			bolo[i] = vela;
 
 		}
 
